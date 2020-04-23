@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<h1>Editing Book</h1>
+			<%= form_for(@book) do |f| %>
+			  <p>Title</p>
+			  <%= f.text_field :title , class: "edit-title"%>
+			  <p>Opinion</p>
+			  <%= f.text_area :body , class: "edit-body"%>
+			  <br>
+			  <br>
+			  <%= f.submit "Update Book",class: "btn btn-primary" %>
+			<% end %>
+
+			<p>
+			  <%= link_to "Show", book_path(@book.id) %>
+			  |
+			    <%= link_to "Back",books_path %>
+			</p>
+		</div>
+	</div>
+</div>
