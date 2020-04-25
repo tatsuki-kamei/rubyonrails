@@ -14,7 +14,7 @@
 	</tbody>
 </table>
 
-<%=link_to edit_user_path(current_user.id),class: "btn btn-default" do %>
+<%=link_to edit_user_path(current_user.id),class: "col-xs-12 btn btn-default" do %>
 	<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
 <% end %>
 
@@ -25,5 +25,5 @@
   <p>Opinion</p>
   <%= f.text_area :body%>
   <br>
-  <%= f.submit 'Create Book',class: "btn btn-primary"%>
+  <%= f.submit 'Create Book',class:"btn btn-primary col-xs-12"%>
 <% end %>
