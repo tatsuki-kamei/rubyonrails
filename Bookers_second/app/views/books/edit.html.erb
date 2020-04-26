@@ -1,22 +1,25 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12">
-			<h1>Editing Book</h1>
-			<%= form_for(@book) do |f| %>
-			  <p>Title</p>
-			  <%= f.text_field :title , class: "edit-title"%>
-			  <p>Opinion</p>
-			  <%= f.text_area :body , class: "edit-body"%>
-			  <br>
-			  <br>
-			  <%= f.submit "Update Book",class: "btn btn-primary" %>
-			<% end %>
+			<div class="col-md-6 col-md-offset-3">
+				<h1>Editing Book</h1>
+				<%= form_for(@book) do |f| %>
+				  <p>Title</p>
+				  <%= f.text_field :title , class: "col-xs-12"%>
+				  <p>Opinion</p>
+				  <%= f.text_area :body , class: "col-xs-12"%>
+				  <br>
+				  <br>
+				  <br>
+				  <%= f.submit "Update Book",class: "btn btn-primary col-xs-12" %>
+				<% end %>
 
-			<p>
-			  <%= link_to "Show", book_path(@book.id), class:""%>
-			  |
-			    <%= link_to "Back",books_path, class:"back"%>
-			</p>
+				<p>
+				  <%= link_to "Show", book_path(@book.id), class:""%>
+				  |
+				    <%= link_to "Back",books_path, class:"back"%>
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
