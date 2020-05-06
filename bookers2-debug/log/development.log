@@ -34454,3 +34454,1340 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 222ms (Views: 209.0ms | ActiveRecord: 7.6ms)
 
 
+  ↳ bin/rails:9
+)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+ernal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+TRAINT "fk_rails_a3d77c3b00"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_be1f05b3d7"
+FOREIGN KEY ("follow_id")
+  REFERENCES "users" ("id")
+)[0m
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/books" for 10.0.2.2 at 2020-05-05 08:00:54 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered users/_profile.html.erb (2195.7ms)
+  Rendered books/_newform.html.erb (14.3ms)
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:30
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:33
+  [1m[36mFavorite Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/index.html.erb:42
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/index.html.erb:53
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:33
+  [1m[36mFavorite Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/index.html.erb:42
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/index.html.erb:53
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:33
+  [1m[36mFavorite Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/index.html.erb:48
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/index.html.erb:53
+  Rendered books/index.html.erb within layouts/application (2260.2ms)
+Completed 200 OK in 2467ms (Views: 2423.3ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/users/2" for 10.0.2.2 at 2020-05-05 08:00:58 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_profile.html.erb (3.1ms)
+  Rendered books/_newform.html.erb (1.8ms)
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/users/show.html.erb:47
+  [1m[36mFavorite Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/users/show.html.erb:53
+  Rendered users/show.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 113ms (Views: 99.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-05-05 08:01:00 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/_profile.html.erb (3.5ms)
+  Rendered books/_newform.html.erb (2.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  Rendered users/index.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 141ms (Views: 129.1ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/relationships" for 10.0.2.2 at 2020-05-05 08:01:03 +0000
+  
+SyntaxError (/home/vagrant/work/bookers2-debug/app/controllers/relationships_controller.rb:30: syntax error, unexpected '=', expecting :: or '.'
+		@user = User.find(params[:relationsh...
+		      ^
+/home/vagrant/work/bookers2-debug/app/controllers/relationships_controller.rb:32: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/relationships_controller.rb:30: syntax error, unexpected '=', expecting :: or '.'
+app/controllers/relationships_controller.rb:32: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/relationships" for 10.0.2.2 at 2020-05-05 08:02:41 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/vagrant/work/bookers2-debug/app/controllers/relationships_controller.rb:29: syntax error, unexpected '=', expecting :: or '.'
+		@user = User.find(params[:relationsh...
+		      ^
+/home/vagrant/work/bookers2-debug/app/controllers/relationships_controller.rb:31: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/relationships_controller.rb:29: syntax error, unexpected '=', expecting :: or '.'
+app/controllers/relationships_controller.rb:31: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/relationships" for 10.0.2.2 at 2020-05-05 08:09:51 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/vagrant/work/bookers2-debug/app/controllers/relationships_controller.rb:29: syntax error, unexpected '=', expecting :: or '.'
+		@user = User.find(params[:follow_id])
+		      ^
+/home/vagrant/work/bookers2-debug/app/controllers/relationships_controller.rb:31: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/relationships_controller.rb:29: syntax error, unexpected '=', expecting :: or '.'
+app/controllers/relationships_controller.rb:31: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/relationships" for 10.0.2.2 at 2020-05-05 08:13:03 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by RelationshipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dGH0YXlgld4k6jaZ2gsQvcqd9DZn1pdpAduVpg730PrErG7JlA9MYe0qee1y6wE0/S1UijN8UMws1zHIctxIwA==", "follow_id"=>"1", "commit"=>"Follow"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.9ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/models/user.rb:18:in `follow'
+app/controllers/relationships_controller.rb:5:in `create'
+Started POST "/relationships" for 10.0.2.2 at 2020-05-05 08:15:27 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (undefined local variable or method `params' for RelationshipsController:Class):
+  
+app/controllers/relationships_controller.rb:27:in `<class:RelationshipsController>'
+app/controllers/relationships_controller.rb:1:in `<top (required)>'
+Started POST "/relationships" for 10.0.2.2 at 2020-05-05 08:17:07 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/vagrant/work/bookers2-debug/app/controllers/relationships_controller.rb:27: syntax error, unexpected ']', expecting ')'
+	@user = User.find(follow.id])
+	                           ^):
+  
+app/controllers/relationships_controller.rb:27: syntax error, unexpected ']', expecting ')'
+Started POST "/relationships" for 10.0.2.2 at 2020-05-05 08:17:35 +0000
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (undefined local variable or method `params' for RelationshipsController:Class):
+  
+app/controllers/relationships_controller.rb:27:in `<class:RelationshipsController>'
+app/controllers/relationships_controller.rb:1:in `<top (required)>'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/users" for 10.0.2.2 at 2020-05-05 08:25:57 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/_profile.html.erb (373.2ms)
+  Rendered books/_newform.html.erb (14.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  Rendered users/index.html.erb within layouts/application (430.1ms)
+Completed 200 OK in 695ms (Views: 652.6ms | ActiveRecord: 6.9ms)
+
+
+Started POST "/relationships" for 10.0.2.2 at 2020-05-05 08:25:59 +0000
+Processing by RelationshipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PIMQAd+DQkT4sRt9u8O/+E9AVy4CQH8WSFIPPUJ7rlaMToqpMuyb+zFxVAkTI65xePD3klbquLNlXqtTPlA2bA==", "follow_id"=>"1", "commit"=>"Follow"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:29
+  [1m[36mRelationship Load (0.6ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."follow_id" = ? LIMIT ?[0m  [["user_id", 2], ["follow_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18
+  [1m[36mRelationship Create (2.8ms)[0m  [1m[32mINSERT INTO "relationships" ("user_id", "follow_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["follow_id", 1], ["created_at", "2020-05-05 08:25:59.314087"], ["updated_at", "2020-05-05 08:25:59.314087"]]
+  ↳ app/models/user.rb:18
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/relationships_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/relationships_controller.rb:7
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 24ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2020-05-05 08:25:59 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_profile.html.erb (3.1ms)
+  Rendered books/_newform.html.erb (1.8ms)
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/users/show.html.erb:47
+  Rendered users/show.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 126ms (Views: 114.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-05-05 08:26:11 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/_profile.html.erb (3.2ms)
+  Rendered books/_newform.html.erb (2.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mRelationship Load (0.7ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."follow_id" = ? LIMIT ?[0m  [["user_id", 2], ["follow_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  Rendered users/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 112ms (Views: 102.6ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/relationships/1" for 10.0.2.2 at 2020-05-05 08:26:12 +0000
+Processing by RelationshipsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p3QabJcVpVZePTZcCydKFARal3PwFFlJO9nKA9phDaP1OzlC5dS7oZWCd94IvWIakKGmmO3kXHIdI/41E7RQQA==", "follow_id"=>"1", "commit"=>"Unfollow", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:29
+  [1m[36mRelationship Load (0.6ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."follow_id" = ? LIMIT ?[0m  [["user_id", 2], ["follow_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:24
+  [1m[36mRelationship Destroy (3.4ms)[0m  [1m[31mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 1]]
+  ↳ app/models/user.rb:24
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/relationships_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/relationships_controller.rb:18
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 19ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2020-05-05 08:26:12 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_profile.html.erb (4.3ms)
+  Rendered books/_newform.html.erb (1.8ms)
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/users/show.html.erb:47
+  Rendered users/show.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 134ms (Views: 124.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2020-05-05 09:43:45 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  Rendered users/_profile.html.erb (6.9ms)
+  Rendered books/_newform.html.erb (1.6ms)
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/users/show.html.erb:47
+  Rendered users/show.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 113ms (Views: 102.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2020-05-05 09:44:55 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  Rendered users/_profile.html.erb (6.0ms)
+  Rendered books/_newform.html.erb (1.8ms)
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/users/show.html.erb:47
+  Rendered users/show.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 136ms (Views: 124.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2020-05-05 09:45:01 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  Rendered users/_profile.html.erb (7.0ms)
+  Rendered books/_newform.html.erb (1.6ms)
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/users/show.html.erb:47
+  Rendered users/show.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 105ms (Views: 96.5ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/relationships" for 10.0.2.2 at 2020-05-05 09:45:04 +0000
+Processing by RelationshipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0n/N9ebChZt0dNpvZ77HlSsHg8DeLyRQV50MGrErFxhislddC61cJL20lRvPXtYcHLcjfIqF4/V6kah0zQCPIg==", "follow_id"=>"1", "commit"=>"Follow"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:29
+  [1m[36mRelationship Load (0.5ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."follow_id" = ? LIMIT ?[0m  [["user_id", 2], ["follow_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:18
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18
+  [1m[36mRelationship Create (2.5ms)[0m  [1m[32mINSERT INTO "relationships" ("user_id", "follow_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["follow_id", 1], ["created_at", "2020-05-05 09:45:04.592934"], ["updated_at", "2020-05-05 09:45:04.592934"]]
+  ↳ app/models/user.rb:18
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/relationships_controller.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/relationships_controller.rb:7
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 19ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2020-05-05 09:45:04 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mRelationship Load (0.6ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."follow_id" = ? LIMIT ?[0m  [["user_id", 2], ["follow_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/_profile.html.erb:17
+  Rendered users/_profile.html.erb (9.3ms)
+  Rendered books/_newform.html.erb (1.6ms)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/users/show.html.erb:47
+  Rendered users/show.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 99ms (Views: 91.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2020-05-05 09:46:44 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mRelationship Load (0.4ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."follow_id" = ? LIMIT ?[0m  [["user_id", 2], ["follow_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/_profile.html.erb:17
+  Rendered users/_profile.html.erb (7.2ms)
+  Rendered books/_newform.html.erb (1.8ms)
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/users/show.html.erb:47
+  Rendered users/show.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 121ms (Views: 113.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2020-05-05 09:50:10 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_profile.html.erb (25.1ms)
+  Rendered users/show.html.erb within layouts/application (28.1ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `following' for #<User:0x0000000007f2c3b0>
+Did you mean?  followings
+               following?
+               followings=
+               follow
+               followers):
+    13: 
+    14: 		<tr>
+    15: 			<th>follows</th>
+    16: 			<th><%= user.following.count %>
+    17: 		</tr>
+    18: </table>
+    19: 
+  
+app/views/users/_profile.html.erb:16:in `_app_views_users__profile_html_erb__2191853289824255711_66622040'
+app/views/users/show.html.erb:13:in `_app_views_users_show_html_erb__954452717002899721_66672180'
+Started GET "/users/1" for 10.0.2.2 at 2020-05-05 09:50:23 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_profile.html.erb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mRelationship Load (0.2ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."follow_id" = ? LIMIT ?[0m  [["user_id", 2], ["follow_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/_profile.html.erb:22
+  Rendered users/_profile.html.erb (7.8ms)
+  Rendered books/_newform.html.erb (2.0ms)
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/users/show.html.erb:47
+  Rendered users/show.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 122ms (Views: 112.2ms | ActiveRecord: 3.1ms)
+
+
+Started DELETE "/relationships/2" for 10.0.2.2 at 2020-05-05 09:50:33 +0000
+Processing by RelationshipsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/mGT1fCgvbv5Nce0RzYLT2BBoxTuMNT7wZvdvbtuhTVOrAl9Hc9kBDD1iMDv1hrGV/EDqLqaE17sl3nTx0UdDw==", "follow_id"=>"1", "commit"=>"Unfollow", "id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:29
+  [1m[36mRelationship Load (0.4ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."follow_id" = ? LIMIT ?[0m  [["user_id", 2], ["follow_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:24
+  [1m[36mRelationship Destroy (2.1ms)[0m  [1m[31mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 2]]
+  ↳ app/models/user.rb:24
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:24
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/relationships_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/relationships_controller.rb:18
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 16ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2020-05-05 09:50:33 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_profile.html.erb:16
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  Rendered users/_profile.html.erb (8.8ms)
+  Rendered books/_newform.html.erb (1.5ms)
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/users/show.html.erb:47
+  Rendered users/show.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 111ms (Views: 104.1ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/relationships" for 10.0.2.2 at 2020-05-05 09:50:37 +0000
+Processing by RelationshipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IwIiDv8+Py+TaCHs6O49EnOYy1mBmR0ZQeVJzRcAUQiTz7imElHmkFqobphADiybRChr5dUz2rxs6e2jayvJMg==", "follow_id"=>"1", "commit"=>"Follow"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:29
+  [1m[36mRelationship Load (0.6ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."follow_id" = ? LIMIT ?[0m  [["user_id", 2], ["follow_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:18
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18
+  [1m[36mRelationship Create (2.5ms)[0m  [1m[32mINSERT INTO "relationships" ("user_id", "follow_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["follow_id", 1], ["created_at", "2020-05-05 09:50:37.597704"], ["updated_at", "2020-05-05 09:50:37.597704"]]
+  ↳ app/models/user.rb:18
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/relationships_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/relationships_controller.rb:7
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 22ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2020-05-05 09:50:37 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_profile.html.erb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mRelationship Load (0.4ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."follow_id" = ? LIMIT ?[0m  [["user_id", 2], ["follow_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/_profile.html.erb:22
+  Rendered users/_profile.html.erb (9.2ms)
+  Rendered books/_newform.html.erb (1.6ms)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/users/show.html.erb:47
+  Rendered users/show.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 95ms (Views: 86.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2020-05-05 09:51:07 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_profile.html.erb:16
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 1]]
+  ↳ app/views/users/_profile.html.erb:20
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mRelationship Load (0.5ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."follow_id" = ? LIMIT ?[0m  [["user_id", 2], ["follow_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/_profile.html.erb:26
+  Rendered users/_profile.html.erb (13.0ms)
+  Rendered books/_newform.html.erb (3.7ms)
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/users/show.html.erb:47
+  Rendered users/show.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 138ms (Views: 126.3ms | ActiveRecord: 4.8ms)
+
+
+Started DELETE "/relationships/3" for 10.0.2.2 at 2020-05-05 09:51:09 +0000
+Processing by RelationshipsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c9bgkipJi7rfV9sUnSuJd/1TeMj2HFL9yFwDm4lJ0lDDG3o6xyZSBRaXlGA1y5j+yuPYdKK2lVjlUKf19WJKag==", "follow_id"=>"1", "commit"=>"Unfollow", "id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:29
+  [1m[36mRelationship Load (0.5ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."follow_id" = ? LIMIT ?[0m  [["user_id", 2], ["follow_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:24
+  [1m[36mRelationship Destroy (3.5ms)[0m  [1m[31mDELETE FROM "relationships" WHERE "relationships"."id" = ?[0m  [["id", 3]]
+  ↳ app/models/user.rb:24
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/relationships_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/relationships_controller.rb:18
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 20ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2020-05-05 09:51:09 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_profile.html.erb:16
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 1]]
+  ↳ app/views/users/_profile.html.erb:20
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  Rendered users/_profile.html.erb (14.9ms)
+  Rendered books/_newform.html.erb (2.0ms)
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/users/show.html.erb:47
+  Rendered users/show.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 137ms (Views: 121.5ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/relationships" for 10.0.2.2 at 2020-05-05 09:51:14 +0000
+Processing by RelationshipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I3ZaqOgbn9lABuDgnvgAtRAoxk31kuP2ypK2uDac/yyTu8AABXRGZonGr5Q2GBE8J5hm8aE4JFPnnhLWSrdnFg==", "follow_id"=>"1", "commit"=>"Follow"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/relationships_controller.rb:29
+  [1m[36mRelationship Load (0.6ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."follow_id" = ? LIMIT ?[0m  [["user_id", 2], ["follow_id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:18
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:18
+  [1m[36mRelationship Create (2.2ms)[0m  [1m[32mINSERT INTO "relationships" ("user_id", "follow_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 2], ["follow_id", 1], ["created_at", "2020-05-05 09:51:14.188135"], ["updated_at", "2020-05-05 09:51:14.188135"]]
+  ↳ app/models/user.rb:18
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/relationships_controller.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/relationships_controller.rb:7
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 20ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2020-05-05 09:51:14 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/_profile.html.erb:16
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 1]]
+  ↳ app/views/users/_profile.html.erb:20
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mRelationship Load (0.2ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."follow_id" = ? LIMIT ?[0m  [["user_id", 2], ["follow_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/_profile.html.erb:26
+  Rendered users/_profile.html.erb (11.1ms)
+  Rendered books/_newform.html.erb (1.6ms)
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/users/show.html.erb:47
+  Rendered users/show.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 104ms (Views: 94.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/2" for 10.0.2.2 at 2020-05-05 09:51:21 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_profile.html.erb:16
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 2]]
+  ↳ app/views/users/_profile.html.erb:20
+  Rendered users/_profile.html.erb (6.7ms)
+  Rendered books/_newform.html.erb (1.9ms)
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/users/show.html.erb:47
+  [1m[36mFavorite Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/users/show.html.erb:53
+  Rendered users/show.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 108ms (Views: 94.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/users/2" for 10.0.2.2 at 2020-05-05 10:13:17 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_profile.html.erb (0.6ms)
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 4.2ms)
+
+
+  
+SyntaxError (/home/vagrant/work/bookers2-debug/app/views/users/_profile.html.erb:27: syntax error, unexpected keyword_end, expecting end-of-input
+'.freeze;				 end 
+         				 ^~~):
+  
+app/views/users/_profile.html.erb:27: syntax error, unexpected keyword_end, expecting end-of-input
+app/views/users/show.html.erb:13:in `_app_views_users_show_html_erb__4457694657800495842_70203693878320'
+Started GET "/users/2" for 10.0.2.2 at 2020-05-05 10:14:05 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 11]]
+  ↳ app/views/users/show.html.erb:13
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 11]]
+  ↳ app/views/users/show.html.erb:13
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 11]]
+  ↳ app/views/users/show.html.erb:13
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 11]]
+  ↳ app/views/users/show.html.erb:13
+  Rendered users/_profile.html.erb (470.2ms)
+  Rendered users/show.html.erb within layouts/application (473.0ms)
+Completed 500 Internal Server Error in 487ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `following_user_path' for #<#<Class:0x00007fb324788aa0>:0x00007fb324f3bcc0>
+Did you mean?  followings_user_path
+               followers_user_path
+               followings_user_url):
+    14: 		<tr>
+    15: 			<th>follows</th>
+    16: 			<th>
+    17: 				<%= link_to following_user_path(@user) do %>
+    18: 					<%= user.followings.count %>
+    19: 				<% end %>
+    20: 			</th>
+  
+app/views/users/_profile.html.erb:17:in `_app_views_users__profile_html_erb___4217483999511610031_70203697856560'
+app/views/users/show.html.erb:13:in `_app_views_users_show_html_erb__4457694657800495842_70203697922940'
+Started GET "/users/2" for 10.0.2.2 at 2020-05-05 10:14:25 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_profile.html.erb:18
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 2]]
+  ↳ app/views/users/_profile.html.erb:26
+  Rendered users/_profile.html.erb (305.1ms)
+  Rendered books/_newform.html.erb (14.2ms)
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/users/show.html.erb:47
+  [1m[36mFavorite Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/users/show.html.erb:53
+  Rendered users/show.html.erb within layouts/application (349.0ms)
+Completed 200 OK in 542ms (Views: 495.6ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/users/2/followings" for 10.0.2.2 at 2020-05-05 10:14:27 +0000
+  
+AbstractController::ActionNotFound (The action 'followings' could not be found for UsersController):
+  
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/2" for 10.0.2.2 at 2020-05-05 10:14:48 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_profile.html.erb:18
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 2]]
+  ↳ app/views/users/_profile.html.erb:26
+  Rendered users/_profile.html.erb (303.2ms)
+  Rendered books/_newform.html.erb (16.0ms)
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/users/show.html.erb:47
+  [1m[36mFavorite Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/users/show.html.erb:53
+  Rendered users/show.html.erb within layouts/application (354.9ms)
+Completed 200 OK in 558ms (Views: 508.7ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/users/2/followings" for 10.0.2.2 at 2020-05-05 10:14:51 +0000
+Processing by UsersController#followings as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::MissingTemplate (Missing template users/show_follows, application/show_follows with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/vagrant/work/bookers2-debug/app/views"
+  * "/home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views"
+):
+  
+app/controllers/users_controller.rb:36:in `followings'
+Started GET "/users/2" for 10.0.2.2 at 2020-05-05 10:17:09 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_profile.html.erb:18
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 2]]
+  ↳ app/views/users/_profile.html.erb:26
+  Rendered users/_profile.html.erb (357.1ms)
+  Rendered books/_newform.html.erb (12.0ms)
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/users/show.html.erb:47
+  [1m[36mFavorite Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/users/show.html.erb:53
+  Rendered users/show.html.erb within layouts/application (399.8ms)
+Completed 200 OK in 587ms (Views: 535.1ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/users/2/followings" for 10.0.2.2 at 2020-05-05 10:17:12 +0000
+Processing by UsersController#followings as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show_follow.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show_follow.html.erb:1
+  Rendered users/show_follow.html.erb within layouts/application (16.2ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<User:0x00007fe46404de18>):
+    1: <% @user.followings.each do |user| %>
+    2: 	<table>
+    3: 	<tr>
+    4: 	  <td>  <%= user.username %> </td>
+    5: 	  <td><%= link_to '詳細', user_path(user) %></td>
+    6: 	</tr>
+    7: 
+  
+app/views/users/show_follow.html.erb:4:in `block in _app_views_users_show_follow_html_erb___3669326397364641988_70309453601380'
+app/views/users/show_follow.html.erb:1:in `_app_views_users_show_follow_html_erb___3669326397364641988_70309453601380'
+app/controllers/users_controller.rb:36:in `followings'
+Started GET "/users/2/followings" for 10.0.2.2 at 2020-05-05 10:20:14 +0000
+Processing by UsersController#followings as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show_follow.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show_follow.html.erb:1
+  Rendered users/show_follow.html.erb within layouts/application (13.3ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<User:0x00007fe47c04f278>):
+    1: <% @user.followings.each do |user| %>
+    2: 	<table>
+    3: 	<tr>
+    4: 	  <td>  <%= user.username %> </td>
+    5: 	  <td><%= link_to '詳細', user_path(user) %></td>
+    6: 	</tr>
+    7: 
+  
+app/views/users/show_follow.html.erb:4:in `block in _app_views_users_show_follow_html_erb___3669326397364641988_70309654933340'
+app/views/users/show_follow.html.erb:1:in `_app_views_users_show_follow_html_erb___3669326397364641988_70309654933340'
+app/controllers/users_controller.rb:36:in `followings'
+Started GET "/users/2/followings" for 10.0.2.2 at 2020-05-05 10:20:24 +0000
+Processing by UsersController#followings as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show_follow.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show_follow.html.erb:1
+  Rendered users/show_follow.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 91ms (Views: 85.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/2" for 10.0.2.2 at 2020-05-05 10:20:26 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_profile.html.erb:18
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 2]]
+  ↳ app/views/users/_profile.html.erb:26
+  Rendered users/_profile.html.erb (7.9ms)
+  Rendered books/_newform.html.erb (1.8ms)
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/users/show.html.erb:47
+  [1m[36mFavorite Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/users/show.html.erb:53
+  Rendered users/show.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 132ms (Views: 119.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/2/followings" for 10.0.2.2 at 2020-05-05 10:21:49 +0000
+Processing by UsersController#followings as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show_follow.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show_follow.html.erb:3
+  Rendered users/show_follow.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 87ms (Views: 81.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/2/followings" for 10.0.2.2 at 2020-05-05 10:22:30 +0000
+Processing by UsersController#followings as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show_follow.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show_follow.html.erb:3
+  Rendered users/show_follow.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 86ms (Views: 80.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/2/followings" for 10.0.2.2 at 2020-05-05 10:23:39 +0000
+Processing by UsersController#followings as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show_follow.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show_follow.html.erb:3
+  Rendered users/show_follow.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 96ms (Views: 92.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/2/followings" for 10.0.2.2 at 2020-05-05 10:24:14 +0000
+Processing by UsersController#followings as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show_follow.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show_follow.html.erb:3
+  Rendered users/show_follow.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 105ms (Views: 97.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/2" for 10.0.2.2 at 2020-05-05 10:24:15 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_profile.html.erb:18
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 2]]
+  ↳ app/views/users/_profile.html.erb:26
+  Rendered users/_profile.html.erb (8.5ms)
+  Rendered books/_newform.html.erb (1.5ms)
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/users/show.html.erb:47
+  [1m[36mFavorite Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/users/show.html.erb:53
+  Rendered users/show.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 103ms (Views: 91.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users/2/followers" for 10.0.2.2 at 2020-05-05 10:24:16 +0000
+Processing by UsersController#followers as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40
+  Rendering users/show_followers.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 2]]
+  ↳ app/views/users/show_followers.html.erb:3
+  Rendered users/show_followers.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 90ms (Views: 81.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-05-05 10:24:23 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/_profile.html.erb (4.6ms)
+  Rendered users/index.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"followings", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+    14: 		<tr>
+    15: 			<th>follows</th>
+    16: 			<th>
+    17: 				<%= link_to followings_user_path(@user) do %>
+    18: 					<%= user.followings.count %>
+    19: 				<% end %>
+    20: 			</th>
+  
+app/views/users/_profile.html.erb:17:in `_app_views_users__profile_html_erb__1923288933294074852_70309570411860'
+app/views/users/index.html.erb:5:in `_app_views_users_index_html_erb__4271144613336776780_70309570477960'
+Started GET "/users" for 10.0.2.2 at 2020-05-05 10:25:41 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_profile.html.erb:18
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 2]]
+  ↳ app/views/users/_profile.html.erb:26
+  Rendered users/_profile.html.erb (9.8ms)
+  Rendered books/_newform.html.erb (2.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mRelationship Load (0.8ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."follow_id" = ? LIMIT ?[0m  [["user_id", 2], ["follow_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  Rendered users/index.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 107ms (Views: 96.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/users/2/followings" for 10.0.2.2 at 2020-05-05 10:25:50 +0000
+Processing by UsersController#followings as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show_follow.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show_follow.html.erb:3
+  Rendered users/show_follow.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 84ms (Views: 75.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-05-05 10:31:54 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_profile.html.erb:18
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 2]]
+  ↳ app/views/users/_profile.html.erb:26
+  Rendered users/_profile.html.erb (8.0ms)
+  Rendered books/_newform.html.erb (1.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:26
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mRelationship Load (0.5ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."follow_id" = ? LIMIT ?[0m  [["user_id", 2], ["follow_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  Rendered users/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 95ms (Views: 87.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/2/followings" for 10.0.2.2 at 2020-05-05 10:31:58 +0000
+Processing by UsersController#followings as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show_follow.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show_follow.html.erb:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show_follow.html.erb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 1]]
+  ↳ app/views/users/show_follow.html.erb:9
+  Rendered users/show_follow.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 104ms (Views: 95.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/2/followings" for 10.0.2.2 at 2020-05-05 10:34:12 +0000
+Processing by UsersController#followings as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show_follow.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show_follow.html.erb:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show_follow.html.erb:8
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 1]]
+  ↳ app/views/users/show_follow.html.erb:9
+  Rendered users/show_follow.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 81ms (Views: 75.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/2" for 10.0.2.2 at 2020-05-05 10:34:14 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_profile.html.erb:18
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 2]]
+  ↳ app/views/users/_profile.html.erb:26
+  Rendered users/_profile.html.erb (9.4ms)
+  Rendered books/_newform.html.erb (1.9ms)
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mFavorite Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/users/show.html.erb:47
+  [1m[36mFavorite Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 3], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/models/book.rb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/users/show.html.erb:53
+  Rendered users/show.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 116ms (Views: 101.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2020-05-05 10:34:16 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/_profile.html.erb:18
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 2]]
+  ↳ app/views/users/_profile.html.erb:26
+  Rendered users/_profile.html.erb (7.5ms)
+  Rendered books/_newform.html.erb (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:28
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/index.html.erb:34
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 1]]
+  ↳ app/views/users/index.html.erb:36
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mRelationship Load (0.2ms)[0m  [1m[34mSELECT  "relationships".* FROM "relationships" WHERE "relationships"."user_id" = ? AND "relationships"."follow_id" = ? LIMIT ?[0m  [["user_id", 2], ["follow_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:41
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follow_id" WHERE "relationships"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:34
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."user_id" WHERE "relationships"."follow_id" = ?[0m  [["follow_id", 2]]
+  ↳ app/views/users/index.html.erb:36
+  Rendered users/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 105ms (Views: 95.7ms | ActiveRecord: 2.9ms)
+
+
